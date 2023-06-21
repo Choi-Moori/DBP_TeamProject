@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.torder.repository.MyPageUserRepository">
+    <select id="findById" parameterType="String" resultType="MyPageUserEntity">
+        select
+            PK_user_id, user_id, nickname
+        from
+            users
+        where
+            user_id = #{user_id}
+    </select>
+
+    <select id="findMatching" parameterType="Long" resultType="MyPageMatchingEntity">
+        select
+            m.PK_matching_id, m.contents_id, c.title
+        from
+            contents c, matching m
+        where
+            c.PK_content_id = m.contents_id and m.user_id = #{PK_user_id};
+    </select>
+
+    
+    <delete id="delete" parameterType="Long">
+        delete from matching
+        where
+            PK_matching_id = #{matchingId};
+    </delete>
+</mapper>

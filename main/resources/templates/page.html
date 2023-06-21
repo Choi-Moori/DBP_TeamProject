@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/homeCss.css">
+</head>
+<body>
+<div class="container">
+    <div class="myInfo">
+        <a href="/"></a>
+        <h1>글 상세 페이지</h1>
+
+        <h3 th:text="'콘텐츠 아이디 = ' + ${content.PKContentId}"></h3>
+        <h3 th:text="'카테고리 = ' + ${content.categoryId == 2 ? '한식' :
+                                            content.categoryId == 3 ? '일식' :
+                                            content.categoryId == 4 ? '양식' :
+                                            content.categoryId == 5 ? '중식' :
+                                            content.categoryId == 6 ? '카페' :
+                                            content.categoryId == 7 ? '패스트푸드' :
+                                            content.categoryId}"></h3>
+        <h3 th:text="'제목 = ' + ${content.title}"></h3>
+        <h3 th:text="'내용 = ' + ${content.body}"></h3>
+        <h3 th:text="'종료시간 = ' + ${content.endTime}"></h3>
+        <h3 th:text="'장소 = ' + ${content.location}"></h3>
+        <h3 th:text="'상태 = ' + ${content.contentState == 1 ? '참여가능' : '참여불가능'}"></h3>
+        <button>참여</button>
+    </div>
+</div>
+
+</body>
+</html>

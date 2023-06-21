@@ -1,0 +1,202 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.background-container{
+    width: 100%;
+    position:absolute;
+    z-index: 1;
+    overflow: auto;
+}
+.background-container::after{
+    height:100vh;
+    content:"";
+    /* background-image: url('../image/backgound_image.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index:-1;
+    opacity: 0.4;
+}
+/*siwper css */
+.swiper-container{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border: 8px solid  black;
+}
+.swiper-slide{
+    width:100%;
+    height:100%;
+    background-size: cover;
+}
+.swiper-slide:nth-child(1){
+    background-image: url('../img/chicken.jpg');
+}
+.swiper-slide:nth-child(2){
+    background-image: url('../img/sushi.jpg');
+}
+.swiper-slide:nth-child(3){
+    background-image: url('../img/pasta.jpg');
+}
+.swiper-slide:nth-child(4){
+    background-image: url('../img/porkbelly.jpg');
+}
+.swiper-slide:nth-child(5){
+    background-image: url('../img/pizza.jpg');
+}
+.navigator-container{
+    width: 100%;
+    background-color: black;
+}
+.topbutton {
+    float: right;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+/*header 제목*/
+header{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+#title{
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-top: 0.8em;
+}
+/*음식 카테고리*/
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+.catego_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.category_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.category_food{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    align-items: center;
+}
+.category_food > img{
+    width:80px;
+    height:80px;
+}
+.category-item {
+    display: flex;
+    width:100%;
+    margin-top:1em;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    border:none;
+    font-size: larger;
+    font-weight: bold;
+    padding:0.4em;
+}
+/*검색창*/
+.search_container {
+    display: flex;
+    height: 70px;
+    width: 770px;
+    margin-top: 2em;   
+}
+.search_box {
+    flex: 1;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center; /* 추가 */
+}
+
+.search_box input {
+    flex: 9;
+    /*search-box 내부에서 9만큼의 크기 차지*/
+    height: 46px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.search_box button {
+    flex: 1;
+    /*search-box 내부에서 1만큼의 크기 차지*/
+    height: 46px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: black;
+    color: #ffffff;
+}
+/*게시글 컨테이너*/
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    padding: 0.5em;
+}
+/*게시글 글자, 버튼 속성*/
+#listTitle{
+    font-size: 3em;
+    font-weight: bold;
+}
+.writepage{
+    display: flex;
+    justify-content: flex-end;
+}
+.main_title > p{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.main_wrap{
+    width: 100%;
+    margin-top:1em;
+}
+.main_page{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.main_page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    line-height: 100%;
+}

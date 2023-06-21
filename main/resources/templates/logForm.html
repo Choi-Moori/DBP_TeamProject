@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="/css/home.css" />
+      <link rel="stylesheet" href="/css/login.css" />
+      <title>회원가입 페이지</title>
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="container-xl">
+        <div class="content-container">
+          <div class="title-container">
+            <h1>회원가입</h1>
+          </div>
+          <div class="login-container">
+            <div class="id-container">
+              <label for="id" class="row-cols-md-3 col-form-label">ID</label>
+              <form id="idForm" action="/login/id/new" method="post">
+                <div class="detail-container">
+                  <input type="text" id="id" name="id" title="ID" maxlength="10" required />
+                  <h1 id="testid" th:text="${iddata}"></h1>
+                  <button type="submit" id="idBtn" class="btn btn-outline-dark">아이디 확인</button>
+                </div>
+              </form>
+              </div>
+              <div class="pw-container">
+                <form id="pwFrom" action="/login/pw/new" method="post">
+                  <div class="pw1-container">
+                    <label for="pswd1" class="row-cols-md-3 col-form-label">PassWord</label>
+                    <div class="detail-container">
+                      <input type="password" id="pswd1" name="pswd1" title="PassWord" maxlength="20" required />
+                      <button type="button" id="pswd1Btn" class="btn btn-outline-dark">버튼</button>
+                    </div>
+                  </div>
+                  <div class="pw2-container">
+                    <div class="detail-container">
+                      <label for="pswd2" class="row-cols-md-3 col-form-label">PassWord 재확인</label>
+                    </div>
+                    <div class="detail-container">
+                      <input type="password" id="pswd2" name="pswd2" title="PassWord" maxlength="20" required />
+                      <button type="submit" id="pwBtn" class="btn btn-outline-dark">비밀번호 확인</button>
+                    </div>
+                  </div> 
+                </form> 
+              </div>
+              <div class="nick-container">
+                <label for="nickname" class="row-cols-md-3 col-form-label">NickName</label>
+                <form id="nickForm" action="/login/nick/new" method="post" class="detail-container">
+                  <input type="text" id="nickname" name="nickname" title="NickName" maxlength="10" required />
+                  <button type="submit" id="nickBtn" class="btn btn-outline-dark">닉네임 확인</button>
+                </form>
+              </div>
+              <form action="/login/check/new" method="post" class="btn-container">
+                <button type="button" id="backBtn" class="btn btn-dark">뒤로가기</button>
+                <button type="submit" id="joinResultBtn" class="btn btn-dark w-50">가입하기</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/js/login.js"></script>
+  </body>
+</html>

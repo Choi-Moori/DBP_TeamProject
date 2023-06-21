@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+    <link rel="stylesheet" href="/css/write.css" type="text/css">
+</head>
+
+<body>
+<form action="/post/create" method="post" id="writeContent">
+    <h4>카테고리</h4>
+    <div class="categories">
+        <label><input type="radio" name="category" value="한식" checked>한식</label>
+        <label><input type="radio" name="category" value="일식">일식</label>
+        <label><input type="radio" name="category" value="양식">양식</label>
+        <label><input type="radio" name="category" value="중식">중식</label>
+        <label><input type="radio" name="category" value="카페">카페</label>
+        <label><input type="radio" name="category" value="패스트푸드">패스트푸드</label>
+    </div>
+
+    <h4>제목</h4>
+    <input type="text" placeholder="제목" name="title">
+
+    <h4>본문</h4>
+    <input type="text" placeholder="본문" name="body">
+
+    <h4>장소</h4>
+    <input type="text" placeholder="장소" name="location">
+
+    <h4>마감시간</h4>
+    <input type="time" placeholder="마감시간" name="endTime">
+
+    <button type="submit">글 생성</button>
+</form>
+</body>
+
+</html>

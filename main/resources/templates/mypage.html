@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/homeCss.css">
+</head>
+<body>
+<div class="container">
+    <div class="myInfo">
+        <!-- <a href="/mypage"></a> -->
+        <h1>마이페이지</h1>
+        <p>
+            <h3 th:text="'아이디 ' + ${user_id}"></h3>
+            <h3 th:text="'닉네임 ' + ${nickname}"></h3>
+
+            <table border ="1" width="50%" height=100 bordercolor="black">
+                <thead>
+                    <tr>
+                        <th colspan="4">참여한 글 목록</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="matching : ${myMatching}">
+                        <td th:text="${matching.title}"></td>
+                        <td><a th:href="@{/mypage/{matchingId}/delete(matchingId = ${matching.PKMatchingId})}">탈퇴</a></td>
+                    </tr>
+                    <td colspan="4" th:text="${Empty}"></td>
+                </tbody>
+            </table>
+
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

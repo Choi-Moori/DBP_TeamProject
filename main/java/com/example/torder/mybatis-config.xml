@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="ContentEntity" type="com.example.torder.entity.ContentEntity"/>
+        <typeAlias alias="MyPageUserEntity" type="com.example.torder.entity.MyPageUserEntity"/>
+        <typeAlias alias="MyPageMatchingEntity" type="com.example.torder.entity.MyPageMatchingEntity"/>
+    </typeAliases>
+</configuration>
